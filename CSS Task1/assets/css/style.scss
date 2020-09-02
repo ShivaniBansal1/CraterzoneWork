@@ -1,0 +1,136 @@
+$assetPath : "../images/mainImage.png";
+$twitter : "../images/twitter.png";
+$youTube : "../images/youtube.png";
+$backgroundColour : #336699 ;
+// $centralDivHeight : 55.6 rem; 
+// $colWidth : 50%;
+$colPadding : 7em 1.5em 0em 5em;
+$centralDivHeight : 55rem;
+$display : flex;
+$bodyMargin : 0;
+
+// @mixin card() {
+//   .card {
+//     /* Add shadows to create the "card" effect */
+//      /* Add some padding inside the card container */
+//     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+//     transition: 0.3s;
+//     padding: 2px 16px;
+//   }
+  
+//   /* On mouse-over, add a deeper shadow */
+//   .card:hover {
+//     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+//   }
+  
+// }
+
+body{
+  margin: $bodyMargin;
+}
+
+.header {
+   background-color: $backgroundColour; 
+   height: 2em;
+  
+   .col1{
+    width: 60%;
+   }
+   .col2{
+    width: 40%;
+    justify-content: flex-end;
+     input{
+        padding : 0.1em 0.3em;
+      }
+      div{
+        padding: 0.1em 2em 0.1em 0.3em;
+         input{
+          height: 100%;
+          background-color: orange;
+          color: white;
+          cursor: pointer;
+         }
+
+      }
+   }
+}
+
+.centerDiv{
+    background-image: url($assetPath);
+    background-size: contain  ;  //cover
+    background-repeat: no-repeat; //no
+    height: $centralDivHeight;
+    // display: $display;
+    .insideDiv{
+      .col1{
+        width: 50%;
+        img{
+          padding: 3em;
+        }
+      }
+      .col2{
+        width: 50%;
+        padding: $colPadding;
+      }
+    }
+}
+
+.nav{
+  .colm1{
+    width: 45%;
+  }
+  .colm2{
+    width: 55%;
+    ul{
+      list-style-type: none;
+      li{
+        padding : 0.7em ;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+.row{
+  display: $display;
+  // flex-wrap: wrap;
+}
+
+.card {
+      /* Add shadows to create the "card" effect */
+       /* Add some padding inside the card container */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      padding: 3em 1.5em;
+      background-color: white;
+    }
+    
+    /* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(199, 195, 195, 0.2);
+}
+
+.outsideCardDiv{
+  padding: 9em 2em;
+}
+
+// .container{
+//   padding: 2em 1em;
+// }
+
+.col25{
+  width: 25%;
+  img{
+    background-color: #E0EEEE;
+    padding: 5em 4.5em;
+  }
+  div{
+    padding: 1em 2.5em;
+    margin: 1em;
+  }
+ 
+  // .image{
+  //   background-color: #E0EEEE;
+  // }
+}
+
