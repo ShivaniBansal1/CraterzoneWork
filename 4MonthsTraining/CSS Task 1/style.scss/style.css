@@ -1,0 +1,185 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #336699;
+  padding: 0.1em 2%;
+  height: 2em;
+}
+
+.wrapper-header img {
+  padding: 0 0.2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.wrapper-header button {
+  background-color: orange;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.wrapper-image-background {
+  background-image: url("../assets/mainImage.png");
+  background-size: contain;
+  height: 55em;
+  background-repeat: no-repeat;
+}
+
+.wrapper-image-background .wrapper-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-image-background .wrapper-nav span a {
+  padding: 0.5em;
+  font-size: 13px;
+}
+
+.wrapper-image-background .wrapper-nav .hamburger-nav {
+  display: none;
+}
+
+.wrapper-image-background .wrapper-nav .hamburger-nav i {
+  font-size: 1.8em !important;
+}
+
+.wrapper-banner-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-banner-image div {
+  width: 50%;
+}
+
+.wrapper-banner-image div img {
+  padding: 4em 2em 1em 1em;
+}
+
+.wrapper-banner-image article {
+  width: 50%;
+  padding: 1em 2em 0em 2em;
+}
+
+.wrapper-banner-image article p {
+  line-height: 2.5em;
+  margin: 0;
+}
+
+.card-wrapper {
+  padding: 2em;
+  position: absolute;
+  width: 100%;
+  top: 41em;
+}
+
+.card-wrapper .card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 3em 1.5em;
+}
+
+.card-wrapper .card div {
+  padding: 2%;
+}
+
+.card-wrapper .card div img {
+  background-color: aliceblue;
+  padding: 4em;
+  width: 100%;
+}
+
+.card-wrapper .card div img:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.card-wrapper .card div div {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .wrapper-image-background {
+    background-size: cover;
+    height: 29em;
+    position: relative;
+  }
+  .wrapper-image-background .wrapper-nav span {
+    display: none;
+  }
+  .wrapper-image-background .wrapper-nav .hamburger-nav {
+    display: block;
+  }
+  .card-wrapper {
+    top: 55em;
+  }
+  .card-wrapper .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card-wrapper .card div {
+    width: 50%;
+  }
+  .card-wrapper .card div div {
+    display: none;
+  }
+  .card-wrapper .card div img {
+    padding: 2em;
+  }
+  .wrapper-banner-image {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrapper-banner-image div {
+    width: 100%;
+  }
+  .wrapper-banner-image div img {
+    width: 66%;
+  }
+  .wrapper-banner-image article {
+    width: 100%;
+    position: absolute;
+    top: 27em;
+  }
+  .wrapper-banner-image article p {
+    line-height: initial;
+  }
+}
+/*# sourceMappingURL=style.css.map */

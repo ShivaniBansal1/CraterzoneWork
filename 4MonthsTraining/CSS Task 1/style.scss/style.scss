@@ -1,0 +1,183 @@
+$genericPadding : 0;
+$genericMargin : 0;
+$height : 100%;
+$width : 100%;
+$cursorForButtons : pointer;
+
+@mixin reset-list {
+    @include reset;
+    list-style: none;
+  }
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    
+}
+
+@mixin display($property, $ltr-value) {
+    display: flex;
+    #{$property}: $ltr-value;
+}
+
+@mixin nav($right, $top) {
+  position: absolute;
+    right: $right;
+    top: $top;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  @include reset();  
+}
+
+.wrapper-header{
+    @include display(justify-content, flex-end);
+    background-color: #336699;
+    padding: 0.1em 2%;
+    height: 2em;
+    img{
+        padding: 0 0.2em;
+        width: 2em;
+        cursor: $cursorForButtons;
+    }
+    button {
+        background-color: orange;
+        color: whitesmoke;
+        cursor: $cursorForButtons;
+    }
+}
+
+.wrapper-image-background{
+  background-image: url("../assets/mainImage.png");
+  background-size: contain;
+  height: 55em;
+  background-repeat: no-repeat;
+  
+.wrapper-nav{
+  @include display(justify-content, space-between );
+  padding: 0 1em;
+  align-items: center;
+  span{
+    a{
+      padding: 0.5em;
+      font-size: 13px;
+    }
+  }
+  .hamburger-nav{
+    display: none;
+    i{
+      font-size: 1.8em !important;
+    }
+  }
+}
+}
+
+.wrapper-banner-image{
+  @include display(justify-content, space-around);
+  align-items: center;
+  div{
+    width: 50%;
+    img{
+      padding: 4em 2em 1em 1em;
+    }
+  }
+  article{
+    width: 50%;
+    padding: 1em 2em 0em 2em;
+    p{
+      line-height: 2.5em;
+      margin: 0;
+    }
+  }
+}
+
+.card-wrapper{
+  padding: 2em;
+  position: absolute;
+  width: 100%;
+  top: 41em;
+  .card {
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: white;
+    
+    //extras
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 1.5em;
+    div{
+      padding: 2%;
+      img{
+        background-color: aliceblue;
+        padding: 4em;
+        width: $width;
+        &:hover{
+          background-color: orange;
+          cursor: $cursorForButtons;
+        }
+      }
+  
+      div{
+        padding: 0.5em 0;
+        text-align: center;
+      }
+    }
+  }
+  
+}
+
+
+@media(max-width: 480px) {
+  .wrapper-image-background{
+    background-size: cover;
+    height: 29em;
+    position: relative;
+    .wrapper-nav{
+      span{
+        display: none;
+      }
+      .hamburger-nav{
+        display: block;
+      }
+    }
+  }
+  .card-wrapper{
+    top: 55em;
+    .card{
+      flex-wrap: wrap;
+      div{    
+        width: 50%;
+        div{
+          display: none;
+        }
+        img{
+          padding: 2em;
+        }
+      }
+    }
+  }
+  
+  .wrapper-banner-image{
+    flex-wrap: wrap;
+    div{
+      width: $width;
+      img{
+        width: 66%;
+      }
+    }
+    article{
+      width: $width;
+      position: absolute;
+      top: 27em;
+      p{
+        line-height: initial;
+      }
+    }
+  }
+}
+
