@@ -1,0 +1,123 @@
+$height : 100%;
+$width : 100%;
+
+@mixin reset-list {
+    list-style: none;
+  }
+
+@mixin reset {
+    @include reset-list();
+    margin: 0;
+    padding: 0;   
+}
+
+@mixin display($property, $ltr-value) {
+    display: flex;
+    #{$property}: $ltr-value;
+}
+
+*{
+    @include reset()
+}
+
+body{
+    font-family: Merriweather,Arvo,Georgia,Times,s
+}
+
+.header__inside{
+    @include display(justify-content, space-between);
+    padding: 0 1.6em;
+    align-items: flex-end;
+    margin: 0 4.8em;
+
+}
+
+.contact-info{
+    @include display(justify-content, flex-end);
+    border-bottom: 1px solid #ccc;
+    padding: 0 1.3em;
+    position: relative;
+    .contact-info__social-media{
+        margin: 0 4.5em;
+        padding: 5px 15px;
+        a{
+            padding: 0.4em;
+        }
+    }
+    .contact-info__request-info{
+        .contact-info__request-info--height-100{
+            float: right;
+            font-size: 12px;
+            height: $height;
+            position: absolute;
+            right: 0%;
+            background: #fd2500;
+            color: #fff;
+            border-color: #fd2500;
+            box-shadow: 0 3px 5px -1px #000;
+            z-index: 100;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            transition: padding .5s;
+            &:hover{
+                height: 49px;
+            }
+        }
+    }
+}
+
+.active, .menu-item:hover {
+    border-bottom: 4px solid #fd2500;
+  }
+
+.menu-item__sub-menu{
+    display: none;
+    margin-top: 1.3em;
+    position: absolute;
+}
+
+.nav-container__menu{
+    @include display(justify-content, space-between);
+    padding: 0.5em 0.4em;
+    .menu-item{
+        margin-top: 9px;
+        padding : 0 18px;
+        font-style: italic;
+        letter-spacing: 1px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #292929;
+        font-weight: bold;
+        &:hover .menu-item__sub-menu{
+            display: block;
+             
+        }
+        .menu-item__sub-menu--styling{
+            border-top-color: #373737;
+            font-weight: lighter;
+            color: #aaa;
+            border-top: 1px solid #404040;
+            background-color: #313131;
+            padding: 15px;
+            &:hover{
+                color: #292929;
+            }
+        }
+        
+    }
+
+}
+
+li:hover{
+        color: #888!important;
+}
+
+.picture-wrapper{
+    .picture-wraper__corousel{
+        img{
+            height: $height;
+            width: $width;
+            
+        }
+    }
+}

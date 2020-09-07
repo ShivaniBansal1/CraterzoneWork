@@ -1,0 +1,124 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Merriweather,Arvo,Georgia,Times,s;
+}
+
+.header__inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.6em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 4.8em;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 1px solid #ccc;
+  padding: 0 1.3em;
+  position: relative;
+}
+
+.contact-info .contact-info__social-media {
+  margin: 0 4.5em;
+  padding: 5px 15px;
+}
+
+.contact-info .contact-info__social-media a {
+  padding: 0.4em;
+}
+
+.contact-info .contact-info__request-info .contact-info__request-info--height-100 {
+  float: right;
+  font-size: 12px;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  background: #fd2500;
+  color: #fff;
+  border-color: #fd2500;
+  -webkit-box-shadow: 0 3px 5px -1px #000;
+          box-shadow: 0 3px 5px -1px #000;
+  z-index: 100;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  -webkit-transition: padding .5s;
+  transition: padding .5s;
+}
+
+.contact-info .contact-info__request-info .contact-info__request-info--height-100:hover {
+  height: 49px;
+}
+
+.active, .menu-item:hover {
+  border-bottom: 4px solid #fd2500;
+}
+
+.menu-item__sub-menu {
+  display: none;
+  margin-top: 1.3em;
+  position: absolute;
+}
+
+.nav-container__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em 0.4em;
+}
+
+.nav-container__menu .menu-item {
+  margin-top: 9px;
+  padding: 0 18px;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #292929;
+  font-weight: bold;
+}
+
+.nav-container__menu .menu-item:hover .menu-item__sub-menu {
+  display: block;
+}
+
+.nav-container__menu .menu-item .menu-item__sub-menu--styling {
+  border-top-color: #373737;
+  font-weight: lighter;
+  color: #aaa;
+  border-top: 1px solid #404040;
+  background-color: #313131;
+  padding: 15px;
+}
+
+.nav-container__menu .menu-item .menu-item__sub-menu--styling:hover {
+  color: #292929;
+}
+
+li:hover {
+  color: #888 !important;
+}
+
+.picture-wrapper .picture-wraper__corousel img {
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
